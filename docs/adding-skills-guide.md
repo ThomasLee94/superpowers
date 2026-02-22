@@ -104,6 +104,52 @@ Restart Cursor or start a new chat session.
 | **Extra step** | Copy `.mdc` rule to each project | None | None |
 | **Restart needed** | New session or restart | Restart Codex | New session |
 
+## Editing an Existing Skill
+
+Simpler than adding — no mode wiring needed (already done). But deployment steps still apply.
+
+### 1. Edit the skill
+
+Make changes in `~/Desktop/Code/superpowers/skills/<skill-name>/SKILL.md` (and any companion files).
+
+### 2. If the skill has a Cursor rule companion
+
+Re-copy the updated `.mdc` to each project:
+
+```bash
+cp skills/<skill-name>/cursor-rule.mdc ~/Desktop/Code/kanto/.cursor/rules/<skill-name>.mdc
+cp skills/<skill-name>/cursor-rule.mdc ~/Desktop/Code/admin-portal/.cursor/rules/<skill-name>.mdc
+cp skills/<skill-name>/cursor-rule.mdc ~/Desktop/Code/nclusion-mobile-app/.cursor/rules/<skill-name>.mdc
+```
+
+Cursor rules are standalone copies, not symlinks — they don't auto-update.
+
+### 3. Commit, push, pull
+
+```bash
+cd ~/Desktop/Code/superpowers
+git add skills/<skill-name>/
+git commit -m "update <skill-name>: <what changed>"
+git push origin main
+
+cd ~/.codex/superpowers
+git pull origin main
+```
+
+### 4. Restart sessions
+
+Codex and Claude Code pick up changes on next session start. Cursor picks up skill changes on new session, but rule changes are immediate (since rules are read per-message).
+
+### Edit checklist
+
+- [ ] Skill content updated
+- [ ] (If Cursor rule) `.mdc` re-copied to all projects
+- [ ] Committed and pushed to fork
+- [ ] `git pull` in `~/.codex/superpowers`
+- [ ] New session started (Codex/Claude Code/Cursor)
+
+---
+
 ## Checklist
 
 - [ ] `skills/<skill-name>/SKILL.md` created with valid frontmatter
