@@ -18,4 +18,10 @@ This mode is appropriate for:
 - Repetitive or boilerplate work (new services following the 4-file pattern, migrations, schema updates)
 - Well-understood bug fixes and feature work
 
+## Skills Discipline
+
+Even in Full AI mode, both `using-superpowers` and `context-discipline` still apply.
+Before starting any task, invoke `using-superpowers` first, then invoke `context-discipline`, then continue in Full AI behavior.
+Mode determines HOW you work (proactively generating code); skills determine WHAT workflow you follow.
+
 Confirm the mode switch by saying: "Switched to **Full AI** mode. I'll generate code directly — you review and ship."
