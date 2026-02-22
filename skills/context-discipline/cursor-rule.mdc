@@ -1,0 +1,24 @@
+---
+description: Context discipline - detects tangent requests and suggests session splitting for better AI output quality
+alwaysApply: true
+---
+
+# Context Discipline
+
+## Tangent Detection
+
+When a user request is unrelated to the current task being worked on, flag it before executing:
+
+- "This looks separate from [current work]. I can handle it, but a fresh thread would keep context clean. Proceed here or new thread?"
+
+A tangent is a different feature, file, subsystem, or unrelated question. Clarifying questions and related refactoring are NOT tangents.
+
+## Session Splitting
+
+After 15+ exchanges of implementation work, suggest:
+
+- "We've covered a lot of ground. A fresh thread with a handoff file would improve quality for the next piece."
+
+## State Externalization
+
+After completing significant work (feature done, bug fixed, architecture decided), proactively write progress and key decisions to `docs/progress/YYYY-MM-DD-<topic>-<platform>.md` (platforms: `cursor`, `claude-code`, `codex`) so the next session starts informed rather than guessing.

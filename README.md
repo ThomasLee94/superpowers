@@ -220,6 +220,33 @@ See `skills/writing-skills/SKILL.md` for the complete guide.
 
 Superpowers updates are somewhat coding-agent dependent, but are often automatic.
 
+### Syncing a Fork With Upstream
+
+If you maintain a fork and want a single command to keep `main` current with `upstream/main`, add this repo-local alias:
+
+```bash
+git config alias.sync-main '!f(){ set -e; b=${1:-main}; git diff --quiet && git diff --cached --quiet || { echo "Commit or stash changes first."; exit 1; }; git fetch --all --prune; git checkout "$b"; git rebase "upstream/$b"; git push --force-with-lease origin "$b"; }; f'
+```
+
+Use it from the repository root:
+
+```bash
+git sync-main
+```
+
+This command:
+- Fails if you have staged or unstaged changes
+- Fetches all remotes
+- Rebases your branch (default `main`) onto `upstream/<branch>`
+- Pushes to `origin/<branch>` with `--force-with-lease`
+
+If conflicts occur, resolve them and continue:
+
+```bash
+git add <resolved-files>
+git rebase --continue
+```
+
 ## License
 
 MIT License - see LICENSE file for details
