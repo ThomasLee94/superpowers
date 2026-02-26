@@ -45,7 +45,7 @@ If the task touches data-intensive concerns, do this before code:
 ## DDIA Source & Retrieval Policy
 
 Primary DDIA reference file:
-- `/Users/thomaslee/Desktop/Code/DDIA/ddia-study-resource-ch5-12.md`
+- `/Users/thomaslee/Desktop/Code/DDIA/ddia-study-resource-ch1-12.md`
 
 Strict retrieval rules:
 - Use the file's table of contents/index to select one relevant section; never load the full document by default.
