@@ -45,6 +45,14 @@ After 15+ back-and-forth exchanges on implementation work, suggest:
 
 > "We've covered a lot of ground. If quality matters for the next piece, a fresh thread with a handoff file would give better results."
 
+### Route Independent Workstreams
+
+When the task naturally splits into 2+ independent implementation workstreams, suggest orchestrated subthreads:
+
+> "This can be split into independent scoped subthreads to keep parent context clean. I can orchestrate with `subthread-orchestrator` and integrate reviewed outputs in the parent thread."
+
+Only do this when workstreams have minimal shared state. If coupling is high, keep execution sequential.
+
 ## Intentional Session Scoping
 
 ### Before a Big Task
@@ -89,6 +97,7 @@ Write a handoff file to `docs/progress/YYYY-MM-DD-<topic>-<platform>.md` that a 
 | Mixing debug + feature + refactor | One session, one purpose |
 | Restarting without handoff file | Always externalize before ending |
 | Ignoring context length | Suggest split after 15+ exchanges |
+| Forcing parallel work on coupled tasks | Use `subthread-orchestrator` only for independent scopes |
 
 ## Cursor Rule Companion
 

@@ -80,10 +80,13 @@ All three gates must pass before edits begin.
 ## Execution Flow (After Gates Pass)
 
 1. If both backend and frontend are in scope, start with a backend cycle first.
-2. Implement one scoped cycle (one file hard limit; one function/component preferred).
-3. Run targeted verification for that scope.
-4. Explain exactly what changed and why, mapped to the chosen approach.
-5. Ask one short comprehension check before proposing the next cycle.
+2. If 2+ independent workstreams are present, invoke `subthread-orchestrator` and dispatch scoped subthreads only after engineer approves the dispatch plan.
+3. In guided mode, each subthread scope still requires explicit engineer approval before coding begins.
+4. Implement one scoped cycle (one file hard limit; one function/component preferred).
+5. Run targeted verification for that scope.
+6. Require review-cleared subthread outputs before integration (`requesting-code-review` hard gate).
+7. Explain exactly what changed and why, mapped to the chosen approach.
+8. Ask one short comprehension check before proposing the next cycle.
 
 ## Guardrails
 
