@@ -18,6 +18,14 @@ This mode is appropriate for:
 - Repetitive or boilerplate work (new services following the 4-file pattern, migrations, schema updates)
 - Well-understood bug fixes and feature work
 
+## Subthread Dispatch
+
+When a task contains 2+ independent workstreams with minimal shared state:
+- Invoke `subthread-orchestrator` to keep parent-thread context clean.
+- Use parent thread as orchestrator/integrator; use subthreads for scoped implementation.
+- Require each subthread to run `requesting-code-review` before results are accepted.
+- Integrate only review-cleared outputs, then run aggregate verification in parent thread.
+
 ## Skills Discipline
 
 Even in Full AI mode, both `using-superpowers` and `context-discipline` still apply.
