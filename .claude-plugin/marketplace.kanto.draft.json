@@ -1,19 +1,25 @@
 {
   "name": "superpowers-with-modes-marketplace",
-  "description": "Custom marketplace for Superpowers with full ai/learning/manual modes and wrappers",
   "owner": {
-    "name": "",
-    "email": ""
+    "name": "Thomas Lee",
+    "email": "tlee@nclusion.com"
+  },
+  "metadata": {
+    "description": "Custom marketplace for Superpowers with full ai/learning/manual modes and wrappers",
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "superpowers-with-modes",
       "description": "Superpowers fork with Kanto Full AI, Learning, Manual, and *-superpowers wrappers",
       "version": "1.0",
-      "source": "https://github.com/ThomasLee94/superpowers",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ThomasLee94/superpowers.git"
+      },
       "author": {
-        "name": "",
-        "email": ""
+        "name": "Thomas Lee",
+        "email": "tlee@nclusion.com"
       },
       "strict": true
     }
