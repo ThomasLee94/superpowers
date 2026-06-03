@@ -20,6 +20,8 @@ That keeps upstream sync straightforward:
 
 Because changes are additive, merge conflicts are less likely than if core files were heavily edited.
 
+This fork automates the sync with a `git sync-main` alias (rebase onto upstream + `--force-with-lease` push). See [`syncing-the-fork.md`](syncing-the-fork.md) for what it does and how to set it up on a new machine.
+
 ## Codex and Cursor Installation Behavior
 
 No extra installation steps are required beyond normal Superpowers install/update:
