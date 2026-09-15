@@ -3,6 +3,8 @@ name: using-superpowers
 description: Use when starting any conversation - establishes how to find and use skills, requiring skill invocation before ANY response including clarifying questions
 ---
 
+**Shared Ponytail policy:** For coding work, read and apply [Ponytail](references/ponytail.md) before this workflow. Read it once per session; preserve its current level or opt-out and the active mode’s restrictions. For non-coding work, skip it.
+
 <SUBAGENT-STOP>
 If you were dispatched as a subagent to execute a specific task, ignore this skill.
 </SUBAGENT-STOP>

@@ -3,6 +3,8 @@ name: subthread-orchestrator
 description: Use when you have 2+ independent implementation tasks with minimal shared state and want the parent thread to keep context clean by dispatching scoped subthreads with mandatory review gates.
 ---
 
+**Shared Ponytail policy:** For coding work, read and apply [Ponytail](../using-superpowers/references/ponytail.md) before this workflow. Read it once per session; preserve its current level or opt-out and the active mode’s restrictions. For non-coding work, skip it.
+
 # Subthread Orchestrator
 
 ## Overview

@@ -3,6 +3,8 @@ name: finishing-a-development-branch
 description: Use when implementation is complete, all tests pass, and you need to decide how to integrate the work
 ---
 
+**Shared Ponytail policy:** For coding work, read and apply [Ponytail](../using-superpowers/references/ponytail.md) before this workflow. Read it once per session; preserve its current level or opt-out and the active mode’s restrictions. For non-coding work, skip it.
+
 # Finishing a Development Branch
 
 ## Overview

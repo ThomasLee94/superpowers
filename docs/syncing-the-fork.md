@@ -1,10 +1,10 @@
 # Syncing the Fork with Upstream
 
 This fork (`ThomasLee94/superpowers`) tracks obra's `superpowers` as the
-`upstream` remote and pushes to `origin`. Because the fork is **additive** — new
-skill folders, modes, and wrappers, with core files left unedited — syncing with
-upstream is low-conflict. See [`modes-and-wrappers.md`](modes-and-wrappers.md)
-for why.
+`upstream` remote and pushes to `origin`. The fork adds modes and wrappers,
+plus a shared Ponytail policy linked from every skill. Upstream syncs can conflict with those small core-skill links;
+retain the links and check that newly added skills also load the shared policy.
+See [`modes-and-wrappers.md`](modes-and-wrappers.md) for details.
 
 ## TL;DR
 

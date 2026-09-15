@@ -3,6 +3,8 @@ name: using-git-worktrees
 description: Use when starting feature work that needs isolation from current workspace or before executing implementation plans - ensures an isolated workspace exists via native tools or git worktree fallback
 ---
 
+**Shared Ponytail policy:** For coding work, read and apply [Ponytail](../using-superpowers/references/ponytail.md) before this workflow. Read it once per session; preserve its current level or opt-out and the active mode’s restrictions. For non-coding work, skip it.
+
 # Using Git Worktrees
 
 ## Overview

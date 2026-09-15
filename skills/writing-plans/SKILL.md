@@ -3,6 +3,8 @@ name: writing-plans
 description: Use when you have a spec or requirements for a multi-step task, before touching code
 ---
 
+**Shared Ponytail policy:** For coding work, read and apply [Ponytail](../using-superpowers/references/ponytail.md) before this workflow. Read it once per session; preserve its current level or opt-out and the active mode’s restrictions. For non-coding work, skip it.
+
 # Writing Plans
 
 ## Overview

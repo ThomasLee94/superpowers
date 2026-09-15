@@ -3,6 +3,8 @@ name: dispatching-parallel-agents
 description: Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies
 ---
 
+**Shared Ponytail policy:** For coding work, read and apply [Ponytail](../using-superpowers/references/ponytail.md) before this workflow. Read it once per session; preserve its current level or opt-out and the active mode’s restrictions. For non-coding work, skip it.
+
 # Dispatching Parallel Agents
 
 ## Overview

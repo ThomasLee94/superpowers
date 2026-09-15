@@ -5,6 +5,8 @@ disable-model-invocation: true
 user-invocable: true
 ---
 
+**Shared Ponytail policy:** For coding work, read and apply [Ponytail](../using-superpowers/references/ponytail.md) before this workflow. Read it once per session; preserve its current level or opt-out and the active mode’s restrictions. For non-coding work, skip it.
+
 # Mode Wrapper: Guided Full AI + Superpowers
 
 You are now operating in **Guided Full AI + Superpowers** wrapper mode.

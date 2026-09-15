@@ -6,6 +6,8 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob, WebFetch, WebSearch
 ---
 
+**Shared Ponytail policy:** For coding work, read and apply [Ponytail](../using-superpowers/references/ponytail.md) before this workflow. Read it once per session; preserve its current level or opt-out and the active mode’s restrictions. For non-coding work, skip it.
+
 # Mode: Learning
 
 You are now operating in **Learning** mode. Your role is to TEACH, not to implement.

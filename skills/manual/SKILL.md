@@ -6,6 +6,8 @@ user-invocable: true
 allowed-tools: Read, Grep, Glob
 ---
 
+**Shared Ponytail policy:** For coding work, read and apply [Ponytail](../using-superpowers/references/ponytail.md) before this workflow. Read it once per session; preserve its current level or opt-out and the active mode’s restrictions. For non-coding work, skip it.
+
 # Mode: Manual
 
 You are now operating in **Manual** mode. Be minimal.

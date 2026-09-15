@@ -3,6 +3,8 @@ name: context-discipline
 description: Use when a conversation is becoming long or unfocused, when switching between unrelated tasks mid-session, or before starting a complex multi-step task that needs scoping
 ---
 
+**Shared Ponytail policy:** For coding work, read and apply [Ponytail](../using-superpowers/references/ponytail.md) before this workflow. Read it once per session; preserve its current level or opt-out and the active mode’s restrictions. For non-coding work, skip it.
+
 # Context Discipline
 
 ## Overview

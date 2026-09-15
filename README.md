@@ -30,6 +30,10 @@ Superpowers is a complete software development methodology for your coding agent
 - [License](#license)
 - [Visual companion telemetry](#visual-companion-telemetry)
 
+## Ponytail in this fork
+
+Every skill shares [Ponytail’s simplicity policy](skills/using-superpowers/references/ponytail.md), including direct skill invocations. It favors existing code, standard libraries, and native features while preserving required behavior, mode restrictions, and verification. The default is `full`; use `ponytail lite|full|ultra` to change it or `stop ponytail` to disable it for the session.
+
 ## How it works
 
 It starts from the moment you fire up your coding agent. As soon as it sees that you're building something, it *doesn't* just jump into trying to write code. Instead, it steps back and asks you what you're really trying to do. 
