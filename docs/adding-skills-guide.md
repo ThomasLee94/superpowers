@@ -74,9 +74,10 @@ git push origin main
 
 ## 5. Install Across Platforms
 
-### Codex & Claude Code (shared installation)
+### Codex and Cursor (shared installation)
 
-Both read from `~/.codex/superpowers/skills/` (Codex via symlink, Claude Code via plugin).
+Codex and Cursor read from `~/.codex/superpowers/skills/` via the
+`~/.agents/skills/superpowers` symlink.
 
 ```bash
 cd ~/.codex/superpowers
@@ -84,6 +85,20 @@ git pull origin main
 ```
 
 Restart the agent session. New skills are discovered on startup.
+
+### Claude Code (plugin cache)
+
+Claude Code installs its own copy of the plugin; pulling the Codex checkout
+does not update it. After committing and pushing this fork, update its registered
+marketplace and plugin:
+
+```bash
+claude plugin marketplace update superpowers-with-modes-marketplace
+claude plugin update superpowers-with-modes@superpowers-with-modes-marketplace
+```
+
+Restart Claude Code to load the updated plugin and hooks. Keep only the intended
+Superpowers distribution enabled when multiple marketplaces provide it.
 
 ### Cursor
 
@@ -100,7 +115,7 @@ Restart Cursor or start a new chat session.
 | **Skill discovery** | Available skills list (via hooks + symlink) | Scans `~/.agents/skills/` at startup | Plugin system (`.claude-plugin/`) |
 | **Always-on rules** | `.cursor/rules/*.mdc` per project | Mode skills handle this | Mode skills handle this |
 | **Mode switching** | Skills invoked via description match | `/full-ai`, `/learning`, `/manual` | `/full-ai`, `/learning`, `/manual` |
-| **Install new skill** | `git pull` in `~/.codex/superpowers` | Same `git pull` | Same `git pull` |
+| **Install new skill** | `git pull` in `~/.codex/superpowers` | Same `git pull` | Update marketplace and plugin |
 | **Extra step** | Copy `.mdc` rule to each project | None | None |
 | **Restart needed** | New session or restart | Restart Codex | New session |
 
@@ -138,7 +153,10 @@ git pull origin main
 
 ### 4. Restart sessions
 
-Codex and Claude Code pick up changes on next session start. Cursor picks up skill changes on new session, but rule changes are immediate (since rules are read per-message).
+Codex picks up the pulled changes on the next session start. Update Claude's
+marketplace and plugin as described above, then restart Claude Code. Cursor
+picks up skill changes on a new session, but rule changes are immediate (since
+rules are read per-message).
 
 ### Edit checklist
 

@@ -15,6 +15,8 @@ Long AI sessions degrade. Context fills up, compaction loses nuance, tangent req
 
 **On Codex:** Read and follow [Codex skill continuity](../using-superpowers/references/codex-skill-continuity.md). Maintain the task's active-skill record during normal work and restore the full applicable instructions after compaction. Include the record's path, active mode, skill names, and current workflow stage in handoff summaries.
 
+**On Claude Code:** Read and follow [Claude skill continuity](../using-superpowers/references/claude-skill-continuity.md) for the equivalent per-session record and recovery procedure.
+
 ## Passive Behaviors (Apply Throughout Any Session)
 
 ### Detect Tangent Requests

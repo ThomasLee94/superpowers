@@ -1,4 +1,4 @@
-# Codex skill continuity
+# Codex and Claude Code skill continuity
 
 - Date: 2026-09-16
 - Platform: Codex
@@ -8,3 +8,11 @@
 - Validation: Reviewed the diff, checked local continuity-reference links, and ran `git diff --check` successfully. This documentation change does not exercise a live compaction cycle.
 - Installation: Synced all 24 skills (65 source files) to the shared installation and verified exact source-file matches and the discovery symlink.
 - Delivery: User requested committing these changes, pushing to the configured origin, and syncing the installed checkout. No marketplace publication is part of this task.
+
+## Claude Code continuation
+
+- Added a Claude continuity reference, global `CLAUDE.md` setup guidance, and bootstrap/context-discipline links. Includes per-session records, skill reloads, Ponytail state and acknowledgment, stale plugin-path recovery, and separate subagent records.
+- Extended SessionStart registration to resumed sessions as well as startup, clear, and compaction.
+- Corrected installation guidance: Claude uses a separate marketplace plugin cache rather than the shared Codex checkout.
+- Validation: The new resume-trigger assertion failed before the matcher change and passed afterward; all six hook checks pass. Shell syntax, continuity links, diff whitespace, and marketplace/plugin manifests pass validation. The plugin validator warns that the pre-existing contributor `CLAUDE.md` is not plugin context; recovery ships through skills and user-level `CLAUDE.md`.
+- Deployment: Install the updated customized fork and retain only that Superpowers distribution enabled. A live model compaction cycle has not been exercised.

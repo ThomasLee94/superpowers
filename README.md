@@ -82,6 +82,21 @@ The Superpowers marketplace provides Superpowers and some other related plugins 
   /plugin install superpowers@superpowers-marketplace
   ```
 
+#### Skill continuity for long Claude Code sessions
+
+Merge the [Claude Skill Continuity rule](skills/using-superpowers/references/claude-skill-continuity.md)
+into your global `~/.claude/CLAUDE.md` (or the configured `CLAUDE_CONFIG_DIR`),
+preserving existing instructions. The agent maintains a separate record per
+session and reloads applicable skills after compaction without another user
+invocation. The SessionStart hook loads the Superpowers bootstrap on startup,
+resume, clear, and compaction. An enabled Ponytail policy acknowledges actual
+activation and post-compaction reloads with the single word `Ponytail`.
+
+When using this fork, update its Claude marketplace plugin and keep one
+Superpowers distribution enabled to avoid conflicting bootstrap instructions.
+Claude uses its own plugin cache; updating the Codex checkout alone does not
+update Claude's installed plugin.
+
 ### Antigravity
 
 Install Superpowers as a plugin from this repository:

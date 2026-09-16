@@ -149,6 +149,13 @@ echo "SessionStart hook output tests"
 # (PowerShell ParserError; cmd.exe quote-stripping on paths with metacharacters).
 if node -e '
 const hooks = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8"));
+const sources = new RegExp(`^(?:${hooks.hooks.SessionStart[0].matcher})$`);
+for (const source of ["startup", "resume", "clear", "compact"]) {
+  if (!sources.test(source)) {
+    console.error(`SessionStart does not run for ${source}`);
+    process.exit(1);
+  }
+}
 const entry = hooks.hooks.SessionStart[0].hooks[0];
 if (entry.shell !== "bash") {
   console.error(`SessionStart hook shell is ${JSON.stringify(entry.shell)}, expected "bash"`);
