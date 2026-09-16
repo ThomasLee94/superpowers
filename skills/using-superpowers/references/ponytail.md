@@ -5,6 +5,13 @@ debugging, review, and technical teaching. It guides the solution within the
 active skill's workflow. It does not activate an implementation mode. Skip it
 for unrelated prose and general questions.
 
+## Load acknowledgment
+
+After reading this policy while Ponytail is enabled, emit exactly `Ponytail`
+on its own commentary line. Emit it once on activation and again after a
+post-compaction reload, not on every response or duplicate load. Never emit
+it based only on a skill listing or handoff summary, or while opted out.
+
 ## Choose the smallest complete solution
 
 Read the relevant code and trace the affected flow before deciding. For a bug,

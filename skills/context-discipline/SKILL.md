@@ -13,6 +13,8 @@ Long AI sessions degrade. Context fills up, compaction loses nuance, tangent req
 
 **Core principle:** Sessions are disposable. Files are durable. Important context belongs in files, not chat history.
 
+**On Codex:** Read and follow [Codex skill continuity](../using-superpowers/references/codex-skill-continuity.md). Maintain the task's active-skill record during normal work and restore the full applicable instructions after compaction. Include the record's path, active mode, skill names, and current workflow stage in handoff summaries.
+
 ## Passive Behaviors (Apply Throughout Any Session)
 
 ### Detect Tangent Requests

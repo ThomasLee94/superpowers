@@ -1,3 +1,11 @@
+## Skill continuity after compaction
+
+**Required:** Read [Codex skill continuity](codex-skill-continuity.md) and
+follow its record and recovery lifecycle. Preserve the active mode, user
+overrides, and workflow stage across compaction without requiring the user
+to invoke skills again. The reference also contains the durable `AGENTS.md`
+setup rule.
+
 ## Subagent dispatch requires multi-agent support
 
 Add to your Codex config (`~/.codex/config.toml`):

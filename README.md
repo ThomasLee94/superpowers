@@ -119,6 +119,19 @@ Superpowers is available via the [official Codex plugin marketplace](https://git
 
 - Select `Install Plugin`.
 
+#### Skill continuity for long Codex tasks
+
+To keep active modes and skills recoverable after context compaction, merge
+the [Skill Continuity rule](skills/using-superpowers/references/codex-skill-continuity.md)
+into your global `$CODEX_HOME/AGENTS.md` (`~/.codex/AGENTS.md` by default),
+preserving existing instructions. This applies to both the Codex app and CLI.
+
+The rule directs the agent to keep a separate active-skill record per task,
+update it as the workflow changes, and re-read the applicable skills after
+compaction without asking you to invoke them again. It preserves the current
+workflow stage and retires skills whose scope has ended. This is an
+instruction-based recovery procedure, not a runtime enforcement hook.
+
 ### Cursor
 
 - In Cursor Agent chat, install from marketplace:
